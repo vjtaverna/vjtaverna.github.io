@@ -44,33 +44,38 @@
 							<section id="one">
 								<div class="inner">
 									<header class="major">
-										<h1>Lampshades</h1>
+										<h1>nTop Lattice Construction: DfAM</h1>
 									</header>
-									<span class="image main"><img src="images/stellateddodecahedron1.png.jpg" alt="" /></span>
+									<span class="image main"><img src="images/bikeseat.jpg" alt="" /></span>
 									<div class="row">
-                                        <div class="col-6 col-12-small" width="10%">
-                                            <h3>The Genesis</h3>
-                                            <p>This project’s genesis lies in my growing interest in the CAD software Rhino and its add-on Grasshopper. At the time of this project, Summer 2022, I was working at Fluxspace as an intern in their makerspace, and had recently learned of the existence of Grasshopper through a brief chat with Adam and Alex at Dive Design. After a week-long YouTube bender of different tutorials and projects, I felt that I had the confidence in the software to create objects that I found online or in the world around me. One of the very first tutorials that most Grasshopper guides take you through is a vase or lampshade (which are secretly the same thing). These tutorials inspired me to branch off on my own and create my own lamps and my own tutorials. I don’t have many visuals from this project, so <a href="https://www.instagram.com/artillery3dofficial/tv/ChuA7IiAdeS/">here's</a> a link to an Instagram reel by Artillery 3D—the folks whose printer created the piece.</p>
+                                        <div class="col-8 col-12-small">
+                                            <h3>A New Horizon</h3>
+                                            <p>Anyone who has worked with me for any portion of time will immediately realize my obsession with design for additive manufacturing (DfAM). Over the Summer, I was introduced to a new CAD software (and design methodology) called nTop. nTop is a software that integrates algorithmic CAD with intense math. This lets users define cells maps and patterns to construct complex patterns with a few simple steps. You may think, "Well that piece looks cool, but what's the point of that? Won't the added complexity increase the cost?" This is a wise thought in a conventional manufacturing setting, but the advantage of additive manufacturing is that complexity is free. Considering that, we can design pieces with variable density to only add reinforcement to the locations that need it.</p>
                                         </div>
-                                        <div class="col-6 col-12-small">
-                                            <h3>The Mechanics</h3>
-                                            <p>Speaking as to how I designed this is slightly mechanically intensive; I’ll get into the nitty gritty here. I started by creating a dodecahedron in Grasshopper. This was harder than I initially anticipated, because I needed to locate the center point of each face in 3D space. I made this easier on myself by using cylindrical coordinates. After manually calculating the positions for these faces, I used the polygon tool to create a properly oriented pentagon skew from the base. Then, I used a circular pattern to create the other 4 faces, leaving me with the bottom half of a dodecahedron. From here, I simply mirrored the bottom half about the center point of the full dodecahedron (whose location I also had to manually calculate) and rotated it to fit properly. After constructing my dodecahedron, I needed to actually create the stellation. Simply put, a stellation pattern is a point extrusion about each face. With this in mind, I used the area tool to find the centroid of each face and created SDL (start, direction, length) lines to each centroid. I started each line at the center of the dodecahedron, directing them towards the centroids of the face, and finally set the length to a slider to allow users to adjust how pointy they want the piece to be. In my case, I chose “very pointy.”</p>
-                                        </div>
+                                        <div class="col-4 col-12-small">
+                                            <span class="image fit"><img src="images/ntoplogo.png" alt="" /></span>                                        </div>
                                         <div class="box alt">
                                             <div class="row gtr-50 gtr-uniform">
-                                                <span class="image fit"><img src="images/grasshopperscript.jpg" alt="" /></span>
+
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-6 col-12-small">
-                                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/7sHHi6laoQc?si=7aRkIcPgUiC2WEjL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                                            </div>
-
-                                            <div class="col-6 col-12-small">
-                                                <h3>Education Tie-In</h3>
-                                                <p>A good while after this project, I found myself wanting to share the joys of procedural CAD with others. I partnered with my friend <a href="https://drewdeffenbaugh.com">Drew</a> to create a workshop all about the construction of lampshades. I told some friends from another college about the workshop and they requested that I provide a remote option. While it's not a guide on how to create the lampshade from this post, the video here takes users through everything that I love about Grasshopper and how to make your own lampshade.</p>
-                                                <a href="gh.html" class="button fit" width="100%">More Procedural CAD</a>
+                                            <div class="col-4 col-12-small">
+                                                <span class="image fit"><img src="images/beam.jpg" alt="" /></span>                                        
+                                                <span class="image fit"><img src="images/carabiner.jpg" alt="" /></span>                                        
                                             </div>
-                                        </div>
+                                            <div class="col-8 col-12-small">
+                                                <h3>Mechanical Engineering Beauty</h3>
+                                                <p>If you're anything like me at this point, you're starting to get really excited. Let's consider a mechanical engineer's dream: a cantilevered beam in bending. When we model this, we find the maximum bending moment at the joint with the wall. If all we concern ourselves with is beam breakage and not deformation, then making the beam uniform thickness all the way through is a waste of material. The beam should only be as thick as the maximum bending moment requires it to be. Latticing allows users to decrease the strength (and therefore weight and material use) in places that have been overdesigned without interrupting the overall shape of the piece. In the case of a simply supported beam, we can easily just taper the beam to reduce material cost. However, this extra manufacturing cost can defeat the purpose of redesigning the part in the first place. Additive manufacturing empowers users to recreate their part without any added costs.</p>
+                                                <h3>Artful Beauty</h3>
+                                                <p>In addition to these beautiful engineering applications, this software can also be used to make some pretty asthetic pieces. In my visual thinking class, I adapted this software to create a reaction piece to Vincent Fecteau's work in the Carnegie Museum of Art.</p>
+                                                <div class="box alt">
+                                                <div class="row gtr-50 gtr-uniform">
+    
+                                                </div>
+                                            </div>
+                                            </div>
+                                                <a href="gh.html" class="button fit" width="100%">More Procedural CAD</a>
 							</section>
 
 					</div>

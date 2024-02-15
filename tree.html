@@ -44,33 +44,25 @@
 							<section id="one">
 								<div class="inner">
 									<header class="major">
-										<h1>Lampshades</h1>
+										<h1>Parametrizing Design of 3D Printed Trees</h1>
 									</header>
-									<span class="image main"><img src="images/stellateddodecahedron1.png.jpg" alt="" /></span>
+									<span class="image main"><img src="images/tree.jpg" alt="" /></span>
 									<div class="row">
-                                        <div class="col-6 col-12-small" width="10%">
-                                            <h3>The Genesis</h3>
-                                            <p>This project’s genesis lies in my growing interest in the CAD software Rhino and its add-on Grasshopper. At the time of this project, Summer 2022, I was working at Fluxspace as an intern in their makerspace, and had recently learned of the existence of Grasshopper through a brief chat with Adam and Alex at Dive Design. After a week-long YouTube bender of different tutorials and projects, I felt that I had the confidence in the software to create objects that I found online or in the world around me. One of the very first tutorials that most Grasshopper guides take you through is a vase or lampshade (which are secretly the same thing). These tutorials inspired me to branch off on my own and create my own lamps and my own tutorials. I don’t have many visuals from this project, so <a href="https://www.instagram.com/artillery3dofficial/tv/ChuA7IiAdeS/">here's</a> a link to an Instagram reel by Artillery 3D—the folks whose printer created the piece.</p>
+                                        <div class="col-9 col-12-small">
+                                            <h3>The Seed</h3>
+                                            <p>In my exploration of Grasshopper, I developed a skillset that I was eager to unleash on new projects. As such, when my contacts at Dive Design reached out about a project that would let me use these skills, I jumped at the opportunity. In short, Adam asked me to recreate the trees from their sister company <a href=https://www.willo.design target="blank">Willo</a>, using Grasshopper. This is the amazing part about design for additive manufacturing (DfAM)—we can create truly custom parts and allow consumers to truly take control of the products they receive. Using ShapeDiver, a service that allows designers to host their Grasshopper scripts online, we can give consumers the opportunity to vary the input parameters of the design to create their own custom tree. In addition to this, ShapeDiver offers AR compatibility to visualize how their version of their product would look in their space. This project speaks to the exact vision I dream of when using Grasshopper—democratizing CAD.</p>
                                         </div>
-                                        <div class="col-6 col-12-small">
-                                            <h3>The Mechanics</h3>
-                                            <p>Speaking as to how I designed this is slightly mechanically intensive; I’ll get into the nitty gritty here. I started by creating a dodecahedron in Grasshopper. This was harder than I initially anticipated, because I needed to locate the center point of each face in 3D space. I made this easier on myself by using cylindrical coordinates. After manually calculating the positions for these faces, I used the polygon tool to create a properly oriented pentagon skew from the base. Then, I used a circular pattern to create the other 4 faces, leaving me with the bottom half of a dodecahedron. From here, I simply mirrored the bottom half about the center point of the full dodecahedron (whose location I also had to manually calculate) and rotated it to fit properly. After constructing my dodecahedron, I needed to actually create the stellation. Simply put, a stellation pattern is a point extrusion about each face. With this in mind, I used the area tool to find the centroid of each face and created SDL (start, direction, length) lines to each centroid. I started each line at the center of the dodecahedron, directing them towards the centroids of the face, and finally set the length to a slider to allow users to adjust how pointy they want the piece to be. In my case, I chose “very pointy.”</p>
-                                        </div>
+                                        <div class="col-3 col-12-small">
+                                            <span class="image fit"><img src="images/talltree.webp" alt="" /></span>                                        </div>
                                         <div class="box alt">
                                             <div class="row gtr-50 gtr-uniform">
-                                                <span class="image fit"><img src="images/grasshopperscript.jpg" alt="" /></span>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-6 col-12-small">
-                                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/7sHHi6laoQc?si=7aRkIcPgUiC2WEjL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                                            </div>
 
-                                            <div class="col-6 col-12-small">
-                                                <h3>Education Tie-In</h3>
-                                                <p>A good while after this project, I found myself wanting to share the joys of procedural CAD with others. I partnered with my friend <a href="https://drewdeffenbaugh.com">Drew</a> to create a workshop all about the construction of lampshades. I told some friends from another college about the workshop and they requested that I provide a remote option. While it's not a guide on how to create the lampshade from this post, the video here takes users through everything that I love about Grasshopper and how to make your own lampshade.</p>
-                                                <a href="gh.html" class="button fit" width="100%">More Procedural CAD</a>
                                             </div>
                                         </div>
+                                                <span class="image fit"><img src="images/tree2.jpg" alt="" /></span>                                        
+                                                <h3>More on Mechanics</h3>
+                                                <p>As for the meat and potatoes of how this works, the piece starts with a cylindrical coordinate system to graph a curve (shown here in green). Afterwards, I take the curve and create a polar array, by varying the number of copies of this curve, I can change the cross sectional shape as well. Next, I take these curves and non-uniformly scale them down in the radial direction so that I can use a block called “weave” that alternates between selecting from two lists. Using this new weaved list, I can loft between them to create a surface. There’s a little bit of wizardry that goes on behind the scenes to make it work Just Right, but that’s beyond the scope of this post. After that, I generate the branches by starting points in the trunk and drawing lines in a direction slightly elevated from the horizon. I use the same method with a reoriented plane inside the branch to draw smaller branches. For the leaves, I used a deformed cylindrical plate that I just copied to the end of each branch. If you want to hear more about this project, reach out and chat!                                                </p>
+                                                <a href="gh.html" class="button fit" width="100%">More Procedural CAD</a>
 							</section>
 
 					</div>
