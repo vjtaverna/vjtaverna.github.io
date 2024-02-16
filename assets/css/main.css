@@ -3278,7 +3278,9 @@ input, select, textarea {
 			height: inherit;
 			line-height: inherit;
 			padding: 0 1.5em;
+			
 		}
+
 
 			#header .logo strong {
 				-moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
@@ -3296,10 +3298,19 @@ input, select, textarea {
 			#header .logo:hover strong {
 				background-color: #9bf1ff;
 			}
-
+			#header .logo.one:hover {
+				color: #81b5ec !important;
+			}
+			#header .logo.two:hover {
+				color: #8d82c4 !important;
+			}
+			#header .logo.three:hover {
+				color: #bf82c4 !important;
+			}
 			#header .logo:active strong {
 				background-color: #53e3fb;
 			}
+
 
 		#header nav {
 			display: -moz-flex;
@@ -3400,7 +3411,7 @@ input, select, textarea {
 		}
 
 			#header.alt.style1 .logo strong {
-				color: #6fc3df;
+				color: #bf82c4;
 			}
 
 			#header.alt.style2 .logo strong {
@@ -3408,7 +3419,7 @@ input, select, textarea {
 			}
 
 			#header.alt.style3 .logo strong {
-				color: #ec8d81;
+				color: #81b5ec;
 			}
 
 			#header.alt.style4 .logo strong {
@@ -3632,7 +3643,7 @@ input, select, textarea {
 			}
 
 		#banner.style1:after {
-			background-color: #5290a5;
+			background-color: #bf82c4;
 		}
 
 		#banner.style2:after {
@@ -3640,7 +3651,7 @@ input, select, textarea {
 		}
 
 		#banner.style3:after {
-			background-color: #ec8d81;
+			background-color: #81b5ec;
 		}
 
 		#banner.style4:after {
