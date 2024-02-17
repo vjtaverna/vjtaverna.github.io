@@ -3271,6 +3271,10 @@ input, select, textarea {
 		z-index: 10000;
 	}
 
+		#header .hideOnMobile{
+			border: 0;
+		}
+
 		#header .logo {
 			border: 0;
 			display: inline-block;
@@ -4102,3 +4106,5 @@ input, select, textarea {
 			opacity: 1;
 			visibility: visible;
 		}
+
+		
