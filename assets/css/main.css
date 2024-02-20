@@ -3670,6 +3670,13 @@ input, select, textarea {
 			background-color: #87c5a4;
 		}
 
+		
+	.homehero {
+		display:flex !important;
+		flex-direction: horizontal !important;
+		justify-content: space-around;
+	}
+
 		body.is-preload #banner:after {
 			opacity: 1.0;
 		}
@@ -3690,6 +3697,13 @@ input, select, textarea {
 
 			#banner {
 				background-attachment: scroll;
+				
+			}
+
+			.homehero {
+				display:flex !important;
+				flex-direction: vertical !important;
+				justify-content: space-around;
 			}
 
 		}
@@ -3704,7 +3718,11 @@ input, select, textarea {
 				min-height: 0;
 				top: -2.75em;
 			}
-
+			.homehero {
+				display:flex !important;
+				flex-direction: horizontal !important;
+				justify-content: space-around;
+			}
 				#banner h1 {
 					font-size: 2em;
 				}
@@ -3731,7 +3749,11 @@ input, select, textarea {
 			#banner {
 				padding: 6em 0 2em 0 ;
 			}
-
+			.homehero {
+				display:flex !important;
+				flex-direction: vertical !important;
+				justify-content: space-around;
+			}
 				#banner > .inner .content p br {
 					display: none;
 				}
