@@ -3702,7 +3702,7 @@ input, select, textarea {
 
 			.homehero {
 				display:flex !important;
-				flex-direction: vertical !important;
+				flex-direction: horizontal !important;
 				justify-content: space-around;
 			}
 
@@ -3720,7 +3720,7 @@ input, select, textarea {
 			}
 			.homehero {
 				display:flex !important;
-				flex-direction: horizontal !important;
+				flex-direction: vertical !important;
 				justify-content: space-around;
 			}
 				#banner h1 {
